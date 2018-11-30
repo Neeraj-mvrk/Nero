@@ -1,7 +1,7 @@
 maverick.config(["$routeProvider","$locationProvider","$rootScopeProvider",function($routeProvider,$locationProvider,$rootScopeProvider){
 	
 	$routeProvider.when("/",{
-		templateUrl:"portfolio.html",
+		templateUrl:"index.html",
 		controller:"portfolioController"
 	})
 	.otherwise({

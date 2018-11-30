@@ -1,7 +1,5 @@
-<!DOCTYPE HTML>
-<!--
-	Mavericks live long
--->
+<!-- <!DOCTYPE HTML> -->
+<!--Mavericks live long -->
 <html ng-app="maverick">
 	<head>
 		<title>Massively by HTML5 UP</title>
@@ -9,15 +7,228 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-		<script src="./js/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/app.js"></script>
+		<script src="./js/controller/portfolioController.js"></script>
+        <script src="./js/route/route.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+            emailjs.init("user_zJT7ozalGGOGvAMAYwtDw");
+            })();
+         </script>
 	</head>
 	<body class="is-preload">
-		<div ng-view></div>
-		<!-- Scripts -->
-		<script src="/js/app.js"></script>
-		<script src="/js/controller/mainController.js"></script>
-		<script src="/js/route/route.js"></script>		
+		<!-- Wrapper -->
+<div id="wrapper" class="fade-in" ng-controller="portfolioController as vm">
+
+    <!-- Intro -->
+        <div id="intro">
+            <h2>
+                Hello, I'm <br />
+            Neeraj</h2>
+            <p>I'm a mean-stack web developer.
+               <!-- <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
+            and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p> --></p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+
+    <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Maverick</a>
+        </header>
+
+    <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Home</a></li>
+                <!-- <li><a href="generic.html">Generic Page</a></li>
+                <li><a href="elements.html">Elements Reference</a></li> -->
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/neeraj-negi-996181101/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                <li><a href="https://www.facebook.com/nnegi1" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/maverick_nn1/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/Neeraj-mvrk" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+    <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+                <article class="post featured">
+                    <header class="major">
+                        <span class="date">{{vm.date|date :"mediumDate"}}</span>
+                        <h2><a href="#">And this is <br />
+                            what I do</a></h2>
+                        <p>I am passionate about building excellent software that 
+                            improves the lives of those around me. I specialize in creating 
+                            software for clients ranging from individuals and small-businesses
+                             all the way to large enterprise corporations.</p>
+                    </header>
+                    <a href="#" class="image main"><img src="images/d.jpg" alt="" /></a>
+                    <ul class="actions special">
+                        <li><a href="#" class="button large">Full Story</a></li>
+                    </ul>
+                </article>
+
+            <!-- Posts -->
+                <section class="posts">
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 24, 2017</span> -->
+                            <h2><a href="#">Sed magna<br />
+                            ipsum faucibus</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/a.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 22, 2017</span> -->
+                            <h2><a href="#">Primis eget<br />
+                            imperdiet lorem</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/e.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 18, 2017</span> -->
+                            <h2><a href="#">Ante mattis<br />
+                            interdum dolor</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/x.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 14, 2017</span> -->
+                            <h2><a href="#">Tempus sed<br />
+                            nulla imperdiet</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/3.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 11, 2017</span> -->
+                            <h2><a href="#">Odio magna<br />
+                            sed consectetur</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/c.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <!-- <span class="date">April 7, 2017</span> -->
+                            <h2><a href="#">Augue lorem<br />
+                            primis vestibulum</a></h2>
+                        </header>
+                        <a href="#" class="image fit"><img src="images/f.jpg" alt="" /></a>
+                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                    </article>
+                </section>
+
+            <!-- Footer -->
+                <footer>
+                    <div class="pagination">
+                        <!--<a href="#" class="previous">Prev</a>-->
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page">3</a>
+                        <span class="extra">&hellip;</span>
+                        <a href="#" class="page">8</a>
+                        <a href="#" class="page">9</a>
+                        <a href="#" class="page">10</a>
+                        <a href="#" class="next">Next</a>
+                    </div>
+                </footer>
+
+        </div>
+
+    <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <form name = 'vm.form' class = "gform" method="post" action="https://script.google.com/macros/s/AKfycbyd5Hq5yA7amEdcTEmBw05CVtG2ahlZe9Tas7Y7Zw/exec">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Subject</label>
+                            <input ng-model ="vm.subject" type="text" name="name" id="name" required/>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" ng-model ="vm.mailFrom" name="email" id="email" required/>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" ng-model ="vm.message" id="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage()"/></li>
+                    </ul>
+                </form>
+            </section>
+            <div id="toast"><div id="img"><img src="images/q.png" alt="Smiley face" height="42" width="42"></div><div id="desc">Your message sent successfully.</div></div>
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>H-27,Senior Citizen<br />
+                    P-4 Greater Noida</p>
+                </section>
+                <section>
+                    <h3>Mobile</h3>
+                    <p><a href="#">(+91)9557766609</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">singhneeraj31@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/neeraj-negi-996181101/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                        <li><a href="https://www.facebook.com/nnegi1" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/maverick_nn1/?hl=en" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/Neeraj-mvrk" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+    <!-- Copyright -->
+        <div id="copyright">
+            <ul><li> Neeraj Negi&copy;2018</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+</div>
+        <!-- Scripts -->
+        <script data-cfasync="false" type="text/javascript" src="js/email_script.js"></script>		
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
