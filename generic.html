@@ -307,7 +307,7 @@
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage('vm.form')"/></li>
+                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage('vm.form')" ng-disable="!vm.subject && !vm.mailFrom && !vm.message"/ ></li>
                     </ul>
                 </form>
             </section>
