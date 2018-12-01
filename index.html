@@ -2,7 +2,7 @@
 <!--Mavericks live long -->
 <html ng-app="maverick">
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Maverick</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,12 +14,6 @@
         <script src="./js/app.js"></script>
 		<script src="./js/controller/portfolioController.js"></script>
         <script src="./js/route/route.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-        <script type="text/javascript">
-           (function(){
-            emailjs.init("user_zJT7ozalGGOGvAMAYwtDw");
-            })();
-         </script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -47,8 +41,8 @@
         <nav id="nav">
             <ul class="links">
                 <li class="active"><a href="index.html">Home</a></li>
-                <!-- <li><a href="generic.html">Generic Page</a></li>
-                <li><a href="elements.html">Elements Reference</a></li> -->
+                <li><a href="generic.html">About me</a></li>
+                <!-- <li><a href="elements.html">Elements Reference</a></li> -->
             </ul>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/neeraj-negi-996181101/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
@@ -83,11 +77,10 @@
                     <article>
                         <header>
                             <!-- <span class="date">April 24, 2017</span> -->
-                            <h2><a href="#">Sed magna<br />
-                            ipsum faucibus</a></h2>
+                            <h2><a href="#">QUOTIDIAN</a></h2>
                         </header>
                         <a href="#" class="image fit"><img src="images/a.jpg" alt="" /></a>
-                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <p>BE ALONE THAT IS THE SECRET OF INVENTION, BE ALONE THAT IS WHEN IDEAS ARE BORN</p>
                         <ul class="actions special">
                             <li><a href="#" class="button">Full Story</a></li>
                         </ul>
@@ -95,18 +88,17 @@
                     <article>
                         <header>
                             <!-- <span class="date">April 22, 2017</span> -->
-                            <h2><a href="#">Primis eget<br />
-                            imperdiet lorem</a></h2>
+                            <h2><a href="#">IMPETUOUS</a></h2>
                         </header>
                         <a href="#" class="image fit"><img src="images/e.jpg" alt="" /></a>
-                        <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+                        <p>I HAVE NO SPECIAL TALENTS, I JUST PASSIONATELY CURIOUS</p>
                         <ul class="actions special">
                             <li><a href="#" class="button">Full Story</a></li>
                         </ul>
                     </article>
-                    <article>
+                    <!-- <article>
                         <header>
-                            <!-- <span class="date">April 18, 2017</span> -->
+                             <span class="date">April 18, 2017</span> 
                             <h2><a href="#">Ante mattis<br />
                             interdum dolor</a></h2>
                         </header>
@@ -118,7 +110,7 @@
                     </article>
                     <article>
                         <header>
-                            <!-- <span class="date">April 14, 2017</span> -->
+                             <span class="date">April 14, 2017</span> 
                             <h2><a href="#">Tempus sed<br />
                             nulla imperdiet</a></h2>
                         </header>
@@ -130,7 +122,7 @@
                     </article>
                     <article>
                         <header>
-                            <!-- <span class="date">April 11, 2017</span> -->
+                             <span class="date">April 11, 2017</span> -
                             <h2><a href="#">Odio magna<br />
                             sed consectetur</a></h2>
                         </header>
@@ -142,7 +134,7 @@
                     </article>
                     <article>
                         <header>
-                            <!-- <span class="date">April 7, 2017</span> -->
+                             <span class="date">April 7, 2017</span> 
                             <h2><a href="#">Augue lorem<br />
                             primis vestibulum</a></h2>
                         </header>
@@ -151,13 +143,13 @@
                         <ul class="actions special">
                             <li><a href="#" class="button">Full Story</a></li>
                         </ul>
-                    </article>
+                    </article> -->
                 </section>
 
             <!-- Footer -->
-                <footer>
+                <!-- <footer>
                     <div class="pagination">
-                        <!--<a href="#" class="previous">Prev</a>-->
+                        <a href="#" class="previous">Prev</a>
                         <a href="#" class="page active">1</a>
                         <a href="#" class="page">2</a>
                         <a href="#" class="page">3</a>
@@ -167,7 +159,7 @@
                         <a href="#" class="page">10</a>
                         <a href="#" class="next">Next</a>
                     </div>
-                </footer>
+                </footer> -->
 
         </div>
 
@@ -179,18 +171,27 @@
                         <div class="field">
                             <label for="name">Subject</label>
                             <input ng-model ="vm.subject" type="text" name="name" id="name" required/>
+                            <div ng-messages="vm.form.name.$error " role="alert">
+                                    <div ng-message="required">Subject is required</div>
+                                 </div>
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
                             <input type="text" ng-model ="vm.mailFrom" name="email" id="email" required/>
+                            <div ng-messages="vm.form.email.$error " role="alert">
+                                    <div ng-message="required">Subject is required</div>
+                                 </div>
                         </div>
                         <div class="field">
                             <label for="message">Message</label>
                             <textarea name="message" ng-model ="vm.message" id="message" rows="3" required></textarea>
+                            <div ng-messages="vm.form.message.$error " role="alert">
+                                    <div ng-message="required">Subject is required</div>
+                                 </div>
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage()"/></li>
+                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage('vm.form')"/></li>
                     </ul>
                 </form>
             </section>
@@ -235,7 +236,7 @@
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>
 
 	</body>
 </html>

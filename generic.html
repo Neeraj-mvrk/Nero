@@ -1,118 +1,353 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML >
 <!--
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html ng-app="maverick">
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>Maverick</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+		<!-- Bootstrap core CSS -->
+		<!-- <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+		<!-- Font Awesome CSS -->
+		<!-- <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen"> -->
+		<!-- Animate css -->
+	  <link href="assets/css/animate.css" rel="stylesheet">
+	  <!-- Magnific css -->
+		<link href="assets/css/magnific-popup.css" rel="stylesheet">
+		<!-- Custom styles CSS -->
+		<!-- <link href="assets/css/style.css" rel="stylesheet" media="screen"> -->
+	  <!-- Responsive CSS -->
+	  <link href="assets/css/responsive.css" rel="stylesheet">
+	  <link rel="shortcut icon" href="assets/images/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.png">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+        <script src="./js/angular.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/controller/portfolioController.js"></script>
+        <script src="./js/route/route.js"></script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" ng-controller="portfolioController as vm">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">Neeraj</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">This is Massively</a></li>
-							<li class="active"><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="generic.html">About me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
 						</ul>
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/neeraj-negi-996181101/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://www.facebook.com/nnegi1" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/maverick_nn1/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/Neeraj-mvrk" class="icon fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+			    <div id="main">  
+					<section class="posts">
+						<article>
+							<a href="#" class="image fit"><img src="images/metanoia.jpg" alt="" /></a>
+								<ul style=" text-align: left;">
+									<li><strong>Name:</strong> Neeraj Negi</li>
+									<li><strong>Date of birth:</strong> 31 Marcch 1995</li>
+									<li><strong>Address:</strong> H-27 Senior Citizen,P-4 Greater Noida</li>
+									<li><strong>Nationality:</strong> Indian</li>
+									<li><strong>Mobile:</strong>9557766609</li>
+									<li><strong>Email:</strong> singhneeraj31@gmail.com</li>
 								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+
+								<ul style=" text-align: left;">
+										<li>User Experience Design</li>
+										<li>Coding</li>
+										<li>Debugging</li>
+										<li>Computer Programming</li>
+										<li>Logical Thinking and Problem Solving</li>
+										<li>Video Editing</li>
+									  </ul>
+						</article>
+						<article>
+					  <h3>Objective</h3>
+					  <p>An opportunity to work and upgrade oneself, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community.  I focus on using my interpersonal skills to build good user experience and create a strong interest in my employers. I hope to develop skills in motion design and my knowledge of the Web, and become an honest asset to the business. As an individual, I'm self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.</p>
+
+					  <h3>What I Do ?</h3>
+					  <p>I have been working as a software engineer since 2017. I have a love of clean, elegant styling, and I'm a Software Engineer willing to utilize my 1+ years of experience as Mean stack Web developer and excellent knowledge on cutting edge uptodate Web development technologies Angular, NodeJS,Mongo DB for  modern websites.seeking a Web developer role in your company. I loving creating awesome as per my clients’ need. I think user experience when I try to craft something for my client.</p>
+			           </article>
+                    </section><!-- End About Section -->
+  
+				
+					<!-- Video Section -->
+					<section id="video" class="video-section">
+						<div class="tf-bg-overlay">
+				
+						<div class="container">
+				
+							<div class="video-intro">
+							<a class="popup-video" href="https://www.youtube.com/watch?v=cCOL7MC4Pl0"> <i class="fa fa-play"></i>  </a>
+							<h2>Video Introducing</h2>
+							</div>
+				
+						</div>
+				
+						<!--/.container-->
+						</div>
+						<!--/.overlay-->
+					</section>
+					<!-- /.Video Section -->
+  
+  
+	  <!-- Resume Section -->
+	  <section id="resume" class="resume-section section-padding">
+		  <div class="container">
+			  <h2 class="section-title wow fadeInUp">Resume</h2>
+			  <div class="row">
+				  <div class="col-md-12">
+					  <div class="resume-title">
+						  <h3>Education</h3>
+					  </div>
+					  <div class="resume">
+						  <ul class="timeline">
+							  <li>
+								  <div class="posted-date">
+									  <span class="month">2013-2017</span>
+								  </div><!-- /posted-date -->
+  
+								  <div class="timeline-panel wow fadeInUp">
+									  <div class="timeline-content">
+										  <div class="timeline-heading">
+											  <h3>Bachelor degree certificate</h3>
+											  <span>B.tech in Computer Science Engineering, Birla Institute of Applied Science,Uttrakhand</span>
+										  </div><!-- /timeline-heading -->
+  
+										  <div class="timeline-body">
+											  <p>I have completed Computer Science Engineering from Uttrakhand University.</p>
+										  </div><!-- /timeline-body -->
+									  </div> <!-- /timeline-content -->
+								  </div><!-- /timeline-panel -->
+							  </li>
+  
+							  <li class="timeline-inverted">
+								  <div class="posted-date">
+									  <span class="month">2010-2012</span>
+								  </div><!-- /posted-date -->
+  
+								  <div class="timeline-panel wow fadeInUp">
+									  <div class="timeline-content">
+										  <div class="timeline-heading">
+											  <h3>Higher Secondary certificate</h3>
+											  <span>Jagran Public School,CBSE board, Noida</span>
+										  </div><!-- /timeline-heading -->
+  
+										  <div class="timeline-body">
+											  <p>From this school of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+										  </div><!-- /timeline-body -->
+									  </div> <!-- /timeline-content -->
+								  </div> <!-- /timeline-panel -->
+							  </li>
+  
+							  <li>
+								  <div class="posted-date">
+									<span class="month">1999-2010</span>
+								  </div><!-- /posted-date -->
+  
+								  <div class="timeline-panel wow fadeInUp">
+									  <div class="timeline-content">
+										  <div class="timeline-heading">
+											  <h3>Secondary school certificate</h3>
+											  <span>Maharishi Vidya Mandir,CBSE Board, Noida</span>
+										  </div><!-- /timeline-heading -->
+  
+										  <div class="timeline-body">
+											  <p>I was awesome at computers, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy.</p>
+										  </div><!-- /timeline-body -->
+									  </div> <!-- /timeline-content -->
+								  </div><!-- /timeline-panel -->
+							  </li>
+						  </ul>
+					  </div>
+				  </div>
+			  </div><!-- /row -->
+  
+			  <div class="row">
+				  <div class="col-md-12">
+					  <div class="resume-title">
+						  <h3>Experience</h3>
+					  </div>
+					  <div class="resume">
+						  <ul class="timeline">
+							  <li class="timeline-inverted">
+								  <div class="posted-date">
+									<span class="month">2017-Present</span>
+								  </div><!-- /posted-date -->
+  
+								  <div class="timeline-panel wow fadeInUp">
+									  <div class="timeline-content">
+										  <div class="timeline-heading">
+											  <h3>Software Engineer</h3>
+											  <span>DigiSpice, Sector-125, Noida</span>
+										  </div><!-- /timeline-heading -->
+  
+										  <div class="timeline-body">
+											  <p>1+ year of professional experience as MEAN Stack developer at DigiSpice. Developed Three Web Application and a chat application from scatch to production including front end, back end ,production and maintenance using MEAN stack web development technologies. mine. I am so happy, my dear friend.</p>
+										  </div><!-- /timeline-body -->
+									  </div> <!-- /timeline-content -->
+								  </div> <!-- /timeline-panel -->
+							  </li>
+  
+							  <!-- <li>
+								  <div class="posted-date">
+									<span class="month">2013-2015</span>
+								  </div>
+  
+								  <div class="timeline-panel wow fadeInUp">
+									  <div class="timeline-content">
+										  <div class="timeline-heading">
+											  <h3>Lead UX Consultant</h3>
+											  <span>Lucky8 Designing Firm, California</span>
+										  </div>
+  
+										  <div class="timeline-body">
+											  <p>Completely provide access to seamless manufactured products before functionalized synergy. Progressively redefine competitive.</p>
+										  </div>
+									  </div> 
+								  </div>
+							  </li> -->
+						  </ul>
+					  </div>
+				  </div>
+			  </div><!-- /row -->
+		  </div><!-- /.container -->
+	  </section><!-- End Resume Section -->
+  
+  
+	  <!-- Skills Section -->
+	  <article class="post featured">
+			<ul class="links"> 
+			<h3>skills</h3>			
+		  <div class="row more-skill text-center">
+			<div class="col-xs-12 col-sm-4 col-md-2">
+				<div class="chart" data-percent="91" data-color="e74c3c">
+					  <span class="percent"></span>
+					  <div class="chart-text">
+						<span>Javascript</span>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="col-xs-12 col-sm-4 col-md-2">
+				<div class="chart" data-percent="73	" data-color="2ecc71">
+					  <span class="percent"></span>
+					  <div class="chart-text">
+						<span>NodeJs</span>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="col-xs-12 col-sm-4 col-md-2">
+				<div class="chart" data-percent="68" data-color="3498db">
+					  <span class="percent"></span>
+					  <div class="chart-text">
+						<span>AngularJs</span>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="col-xs-12 col-sm-4 col-md-2">
+				<div class="chart" data-percent="68" data-color="3498db">
+					  <span class="percent"></span>
+					  <div class="chart-text">
+						<span>Html</span>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="col-xs-12 col-sm-4 col-md-2">
+				<div class="chart" data-percent="68" data-color="3498db">
+					  <span class="percent"></span>
+					  <div class="chart-text">
+						<span>MongoDB</span>
+					  </div>
+				  </div>
+			  </div>
+		  </div> 
+	    </ul>
+	</article>
+	</div>
+	<footer id="footer">
+            <section>
+                <form name = 'vm.form' class = "gform" method="post" action="https://script.google.com/macros/s/AKfycbyd5Hq5yA7amEdcTEmBw05CVtG2ahlZe9Tas7Y7Zw/exec">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Subject</label>
+                            <input ng-model ="vm.subject" type="text" name="name" id="name" required/>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" ng-model ="vm.mailFrom" name="email" id="email" required/>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" ng-model ="vm.message" id="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" ng-click="vm.sendMessage('vm.form')"/></li>
+                    </ul>
+                </form>
+            </section>
+            <div id="toast"><div id="img"><img src="images/q.png" alt="Smiley face" height="42" width="42"></div><div id="desc">Your message sent successfully.</div></div>
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Address</h3>
+                    <p>H-27,Senior Citizen<br />
+                    P-4 Greater Noida</p>
+                </section>
+                <section>
+                    <h3>Mobile</h3>
+                    <p><a href="#">(+91)9557766609</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">singhneeraj31@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/neeraj-negi-996181101/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+                        <li><a href="https://www.facebook.com/nnegi1" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/maverick_nn1/?hl=en" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/Neeraj-mvrk" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
 
 				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				<div id="copyright">
+						<ul><li> Neeraj Negi&copy;2018</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
-
+          	<!-- Scroll-up -->
+			  <div class="scroll-up">
+				<a href="#home"><i class="fa fa-angle-up"></i></a>
+			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -121,6 +356,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+  
 
+			<!-- Javascript files -->
+			<script data-cfasync="false" type="text/javascript" src="js/email_script.js"></script>
+			<script src="assets/js/jquery.js"></script>
+			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery.stellar.min.js"></script>
+			<script src="assets/js/jquery.sticky.js"></script>
+		<script src="assets/js/smoothscroll.js"></script>
+			<script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/jquery.countTo.js"></script>
+		<script src="assets/js/jquery.inview.min.js"></script> 
+		<script src="assets/js/jquery.easypiechart.js"></script>
+		<script src="assets/js/jquery.shuffle.min.js"></script>
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+		<script src="assets/js/jquery.fitvids.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+		<script src="assets/js/scripts.js"></script>
 	</body>
 </html>
