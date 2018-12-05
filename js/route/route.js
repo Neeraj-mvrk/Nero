@@ -8,6 +8,14 @@ maverick.config(["$routeProvider","$locationProvider","$rootScopeProvider",funct
 		templateUrl:"generic.html",
 		controller:"portfolioController"
 	})
+	.when("/",{
+		templateUrl:"maverick.html",
+		controller:"maverickController"
+	})
+	.when("/",{
+		templateUrl:"second.html",
+		controller:"maverickController"
+	})
 	.otherwise({
 		redirectTo:"/"
 	})

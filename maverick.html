@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<!--
+	Parallelism by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="maverick">
+	<head>
+		<title>Maverick</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/mmain.css" />
+		<noscript><link rel="stylesheet" href="assets/css/mnoscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+        <script src="./js/angular.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="./js/controller/instaController.js"></script>
+		<script src="./js/route/route.js"></script>
+	</head>
+	<body class="is-preload" ng-controller="instaController as vm">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Items -->
+							<div class="items">
+
+								 <div class="item intro span-2">
+									<h1>{{vm.pdata.data.full_name}}</h1>
+									<p>{{vm.pdata.data.bio}}</p>
+								</div> 
+
+								<article class="item thumb span-1" ng-repeat="value in vm.data.data" ng-if="value.type=='image'">
+									<h2>{{value.caption.text}}</h2>
+									<a ng-href="{{value.images.standard_resolution.url}}" class="image"><img src="{{value.images.standard_resolution.url}}" alt=""></a>
+								</article>
+							</div>
+
+						<!-- Items -->
+							<div class="items">
+
+								<article class="item thumb span-3" ng-repeat="value in vm.data.data" ng-if="value.type=='video'"><h2>{{value.caption.text}}</h2><a ng-href="{{value.videos.standard_resolution.url}}" class="image"><img src="{{value.images.standard_resolution.url}}" alt=""></a></article>
+
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<section>
+							<p><strong>Don't let small minds convince you that your dreams are too big.</strong>	</p>
+						</section>
+						<section>
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
+								<li><a href="https://www.instagram.com/maverick_nn1/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.facebook.com/nnegi1" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<!-- <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li> -->
+							</ul>
+							<ul class="copyright">
+								<li>&copy; NN</li>
+							</ul>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/mutil.js"></script>
+			<script src="assets/js/mmain.js"></script>
+
+	</body>
+</html> 

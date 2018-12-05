@@ -1,1 +1,1 @@
-var maverick = angular.module("maverick",["ngRoute"]);
+	var maverick = angular.module("maverick",["ngRoute"]);
